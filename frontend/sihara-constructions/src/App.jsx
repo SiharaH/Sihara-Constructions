@@ -10,19 +10,6 @@ import Projects from "./pages/projects/Project";
 import Contact from "./pages/contact/ContactPage";
 import Navbar from "./components/navbar";
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-  );
-}
+
 
 export default App;
