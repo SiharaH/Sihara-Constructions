@@ -154,53 +154,7 @@ export default function ContactPage() {
 </section>
 
 
-      {/* Contact Info Section */}
-      <section className="bg-gray-50 py-16 px-6">
-        <h3 className="text-center text-green-900 uppercase font-semibold tracking-wide">
-          We are here
-        </h3>
-        <h2 className="text-center text-4xl font-bold mb-12">Find us on Google</h2>
-
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-          <div className="bg-white shadow-md rounded-2xl p-6 text-center">
-            <div className="text-green-900 text-3xl mb-2">📍</div>
-            <h4 className="font-bold">Address</h4>
-            <p className="text-gray-600">Colombo, Sri Lanka</p>
-          </div>
-          <div className="bg-white shadow-md rounded-2xl p-6 text-center">
-            <div className="text-green-900 text-3xl mb-2">✉️</div>
-            <h4 className="font-bold">Send Email</h4>
-            <p className="text-gray-600">info@sihara.com</p>
-          </div>
-          <div className="bg-white shadow-md rounded-2xl p-6 text-center">
-            <div className="text-green-900 text-3xl mb-2">📞</div>
-            <h4 className="font-bold">Call us</h4>
-            <p className="text-gray-600">+94 77 123 4567</p>
-          </div>
-          <div className="bg-white shadow-md rounded-2xl p-6 text-center">
-            <div className="text-green-900 text-3xl mb-2">📱</div>
-            <h4 className="font-bold">Follow us</h4>
-            <div className="flex justify-center gap-4 mt-2 text-green-900 text-xl">
-              <a href="#">🌐</a>
-              <a href="#">📷</a>
-              <a href="#">▶️</a>
-              <a href="#">✉️</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Map */}
-        <div className="container mx-auto h-96">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63315.10968804049!2d79.82118528567196!3d6.921922679327859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25960b7eec2af%3A0xa74c3c896a0568f7!2sColombo!5e0!3m2!1sen!2slk!4v1705769269846!5m2!1sen!2slk"
-            width="100%"
-            height="100%"
-            allowFullScreen=""
-            loading="lazy"
-            className="rounded-2xl border-0"
-          ></iframe>
-        </div>
-      </section>
+      
     </div>
   );
 }
