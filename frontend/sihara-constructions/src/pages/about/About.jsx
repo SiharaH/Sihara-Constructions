@@ -1,174 +1,156 @@
 import React from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle, Eye, Flag, Heart } from "lucide-react";
 
-// ✅ Import images from src/assets
 import projectImg from "../../assets/projects-building.jpg";
 import clientsImg from "../../assets/happy-clients.jpg";
 import commitmentImg from "../../assets/commitment-house.jpg";
 import drivesImg from "../../assets/construction-worker.jpg";
-import heroBg from "../../assets/hero-bg.jpg"; // 🔹 Add your background image here
+import heroBg from "../../assets/hero-bg.jpg";
 
 const About = () => {
   return (
     <div className="bg-white text-gray-900">
-      {/* Hero Section with Background Image */}
+      {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat text-white text-center py-32"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="relative bg-cover bg-center text-white h-[100vh] px-6 text-center flex flex-col justify-center transition-opacity duration-1000 opacity-100"
+        style={{ backgroundImage: `url(${heroBg})`, clipPath: "ellipse(100% 85% at 50% 0%)" }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10">
-          <span className="bg-gray-700 text-white px-4 py-1 rounded-full text-sm uppercase tracking-wide">
+          <span className="bg-yellow-500 text-red-900 px-4 py-1 rounded-full text-sm uppercase tracking-wide">
             About
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold mt-6">
-            Building With Purpose, <br /> Backed by Trust
+          <h1 className="text-4xl md:text-6xl font-bold mt-6 transform transition-transform duration-700 hover:scale-105">
+            Building With Purpose, Backed by Trust
           </h1>
-          <p className="mt-4 text-lg max-w-2xl mx-auto">
-            At Sihara Constructions, we don’t just build spaces — we build lasting relationships.
+          <p className="mt-4 text-lg max-w-2xl mx-auto transition-opacity duration-700">
+            At Sihara Constructions, we don’t just build spaces — we create lasting relationships through quality, reliability, and precision.
           </p>
         </div>
       </section>
 
-      {/* Section Two */}
+      {/* About Section */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
-          <h2 className="text-4xl font-bold leading-tight mb-6 md:mb-0">
-            Built in Austin. Trusted Across Central Texas.
+          <h2 className="text-4xl font-bold leading-tight mb-6 md:mb-0 transform transition-transform duration-700 hover:translate-y-[-4px]">
+            Constructing Inspired Spaces, Building Enduring Trust
           </h2>
-          <p className="text-lg text-gray-700">
-            At Brikly, we believe construction is more than just concrete and
-            steel — it’s about building trust, understanding your vision, and
-            creating spaces that last for generations. Based in the heart of
-            Austin, we’ve been delivering high-quality residential and
-            commercial construction services across Central Texas with pride,
-            precision, and purpose.
+          <p className="text-lg text-gray-700 transition-opacity duration-700">
+            Construction is more than concrete and steel — it’s about building trust, understanding your vision, and creating lasting spaces. 
+            We deliver high-quality residential and commercial construction services with precision, dedication, and pride.
           </p>
         </div>
 
-        {/* ✅ Stats Grid - Single Row, Full Height, No Gaps */}
+        {/* Stats Grid */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-0 h-[600px]">
-          {/* Column 1 - Projects */}
-          <div className="flex flex-col overflow-hidden">
-            <div className="bg-[#0f3a3f] text-white p-6 flex flex-col justify-center h-1/2">
-              <h3 className="text-green-400 font-semibold uppercase">Projects</h3>
+          {/* Projects */}
+          <div className="flex flex-col overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div className="bg-red-900 text-yellow-500 p-6 flex flex-col justify-center h-1/2">
+              <h3 className="font-semibold uppercase">Projects</h3>
               <p className="text-3xl font-bold mt-2">100+</p>
-              <p className="mt-2 text-gray-200 text-sm">
-                Completed over 100 residential and commercial projects across Central Texas with unmatched precision and professionalism.
+              <p className="mt-2 text-yellow-200 text-sm">
+                Completed over 100 residential and commercial projects with unmatched precision and professionalism.
               </p>
             </div>
-            <img
-              src={projectImg}
-              alt="Projects"
-              className="w-full h-1/2 object-cover"
-            />
+            <img src={projectImg} alt="Projects" className="w-full h-1/2 object-cover transition-transform duration-500 hover:scale-105" />
           </div>
 
-          {/* Column 2 - Commitment */}
-          <div className="flex flex-col overflow-hidden">
-            <img
-              src={commitmentImg}
-              alt="Commitment"
-              className="w-full h-1/2 object-cover"
-            />
-            <div className="bg-green-400 text-black p-6 flex flex-col justify-center h-1/2">
+          {/* Commitment */}
+          <div className="flex flex-col overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <img src={commitmentImg} alt="Commitment" className="w-full h-1/2 object-cover transition-transform duration-500 hover:scale-105" />
+            <div className="bg-yellow-500 text-red-900 p-6 flex flex-col justify-center h-1/2">
               <h3 className="font-semibold uppercase">Commitment</h3>
               <p className="text-3xl font-bold mt-2">110%</p>
               <p className="mt-2 text-sm">
-                We go above and beyond — with 110% dedication to your project, your goals, and your satisfaction from day one.
+                Dedicated to exceeding expectations with professionalism, reliability, and care from start to finish.
               </p>
             </div>
           </div>
 
-          {/* Column 3 - Happy Clients */}
-          <div className="flex flex-col overflow-hidden">
-            <div className="bg-[#0f3a3f] text-white p-6 flex flex-col justify-center h-1/2">
-              <h3 className="text-green-400 font-semibold uppercase">Happy Clients</h3>
+          {/* Happy Clients */}
+          <div className="flex flex-col overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div className="bg-red-900 text-yellow-500 p-6 flex flex-col justify-center h-1/2">
+              <h3 className="font-semibold uppercase">Happy Clients</h3>
               <p className="text-3xl font-bold mt-2">80+</p>
-              <p className="mt-2 text-gray-200 text-sm">
-                We’ve earned the trust of over 80 homeowners and businesses through honest work, clear communication, and quality builds.
+              <p className="mt-2 text-yellow-200 text-sm">
+                Earned the trust of homeowners and businesses through consistent quality, transparency, and client-focused service.
               </p>
             </div>
-            <img
-              src={clientsImg}
-              alt="Happy Clients"
-              className="w-full h-1/2 object-cover"
-            />
+            <img src={clientsImg} alt="Happy Clients" className="w-full h-1/2 object-cover transition-transform duration-500 hover:scale-105" />
           </div>
         </div>
       </section>
 
-      {/* Vision, Mission & Values Section */}
-      <section className="bg-gray-50 py-20">
+      {/* Vision, Mission & Values */}
+      <section className="py-20">
         <div className="max-w-6xl mx-auto text-center px-6">
-          <span className="uppercase tracking-wide text-sm text-gray-500 font-semibold">
+          <span className="uppercase tracking-wide text-sm text-gray-500 font-semibold transition-opacity duration-700 opacity-100">
             Impactful
           </span>
-          <h2 className="text-4xl font-bold mt-4">Vision, Mission & Values</h2>
+          <h2 className="text-4xl font-bold mt-4 transition-transform duration-700 hover:scale-105">
+            Vision, Mission & Values
+          </h2>
 
           <div className="mt-12 grid md:grid-cols-3 gap-8">
-            <div className="bg-white shadow rounded-2xl p-8">
-              <div className="text-green-500 text-4xl mb-4">🎯</div>
+            {/* Vision */}
+            <div className="bg-white shadow rounded-2xl p-8 flex flex-col items-center transition-transform duration-700 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-red-900 p-4 rounded-full mb-4 flex items-center justify-center">
+                <Eye className="w-8 h-8 text-yellow-500" />
+              </div>
               <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-              <p className="text-gray-600">
-                We aim to create lasting spaces that strengthen communities and inspire confidence — built with care and purpose.
+              <p className="text-gray-600 text-center">
+                To be the leading construction company, delivering innovative, sustainable, and high-quality projects that inspire communities.
               </p>
             </div>
 
-            <div className="bg-white shadow rounded-2xl p-8">
-              <div className="text-green-500 text-4xl mb-4">🏁</div>
+            {/* Mission */}
+            <div className="bg-white shadow rounded-2xl p-8 flex flex-col items-center transition-transform duration-700 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-red-900 p-4 rounded-full mb-4 flex items-center justify-center ">
+                <Flag className="w-8 h-8 text-yellow-500" />
+              </div>
               <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-              <p className="text-gray-600">
-                We make construction simple and dependable through clear communication, skilled craftsmanship, and client-first service.
+              <p className="text-gray-600 text-center">
+                To provide reliable, safe, and client-focused construction services, ensuring every project exceeds expectations.
               </p>
             </div>
 
-            <div className="bg-white shadow rounded-2xl p-8">
-              <div className="text-green-500 text-4xl mb-4">💚</div>
+            {/* Values */}
+            <div className="bg-white shadow rounded-2xl p-8 flex flex-col items-center transition-transform duration-700 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-red-900 p-4 rounded-full mb-4 flex items-center justify-center ">
+                <Heart className="w-8 h-8 text-yellow-500" />
+              </div>
               <h3 className="text-xl font-semibold mb-2">Our Values</h3>
-              <p className="text-gray-600">
-                We build with integrity, treat every project like our own, and prioritize quality over shortcuts. We’re committed to doing it right.
+              <p className="text-gray-600 text-center">
+                Integrity, innovation, and excellence guide our work. We prioritize transparency, sustainability, and strong client relationships.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Drives Us Section */}
+      {/* What Drives Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img
-              src={drivesImg}
-              alt="Construction worker"
-              className="rounded-2xl shadow-lg"
-            />
+            <img src={drivesImg} alt="Construction worker" className="rounded-2xl shadow-lg transform transition duration-500 hover:scale-105" />
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-              Real Foundation
-            </p>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">
-              What Drives Us
-            </h2>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Real Foundation</p>
+            <h2 className="text-4xl font-bold text-gray-900 mt-2">What Drives Us</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              We started Brikly to bring reliability back to construction. That means honest timelines, 
-              clear communication, and work that holds up — inside and out. We’re proud to partner with 
-              homeowners, businesses, and developers who care about quality as much as we do.
+              Our commitment to quality, safety, and client satisfaction drives every project. We deliver excellence through skilled craftsmanship and clear communication.
             </p>
 
             <ul className="mt-6 space-y-3">
               {[
                 "Licensed, insured, and ISO-certified professionals",
-                "Customized Build Solutions",
-                "Reliable Timelines",
-                "Clean & Organized Job Sites",
+                "Customized and innovative build solutions",
+                "Reliable timelines and project management",
+                "Clean, safe, and organized job sites",
               ].map((item, i) => (
-                <li key={i} className="flex items-center text-gray-700">
-                  <CheckCircle2 className="h-6 w-6 text-green-600 mr-3" />
+                <li key={i} className="flex items-center text-gray-700 transition-transform duration-500 hover:translate-x-2">
+                  <CheckCircle className="h-6 w-6 text-red-900 mr-3 " />
                   {item}
                 </li>
               ))}
