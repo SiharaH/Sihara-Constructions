@@ -174,7 +174,7 @@ const handleSubmit = (e) => {
               </svg>
             </div>
             <h3 className="font-semibold text-small mb-2 text-red-900">Send Email</h3>
-            <p className="text-gray-600">info@sihara.com</p>
+            <p className="text-gray-600">siharaconstructions@gmail.com</p>
           </div>
 
           {/* Card 2 - Phone */}
@@ -186,7 +186,7 @@ const handleSubmit = (e) => {
               </svg>
             </div>
             <h3 className="font-semibold text-small mb-2 text-red-900">Call us</h3>
-            <p className="text-gray-600">+088 (246) 642-27-10</p>
+            <p className="text-gray-600">+94 74 116 0804 </p>
           </div>
 
     {/* Card 3 - Facebook */}
