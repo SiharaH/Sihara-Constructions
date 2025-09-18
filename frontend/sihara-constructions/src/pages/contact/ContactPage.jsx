@@ -58,9 +58,9 @@ const handleSubmit = (e) => {
           </h2>
           <br />
           <p className="text-gray-600 mb-6">
-            Fill out the form, give us a call, or stop by our office.
+            Connect with our team to discuss your next project. 
             <br />
-            Let’s start building something great together.
+            Together, we’ll turn your vision into reality.
           </p>
           <div className="flex items-center gap-2 text-yellow-500">
             ⭐⭐⭐⭐⭐ <span className="text-gray-700">260+ reviews (4.95 of 5)</span>
@@ -212,7 +212,7 @@ const handleSubmit = (e) => {
           </svg>
         </a>
       </div>
-      <h3 className="font-semibold text-lg mb-2 text-red-900">Follow us</h3>
+      <h3 className="font-semibold text-small mb-2 text-red-900">Follow us</h3>
       <p className="text-gray-600">Facebook</p>
     </div>
   </div>
