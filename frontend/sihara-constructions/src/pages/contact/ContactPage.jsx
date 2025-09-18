@@ -1,6 +1,7 @@
 import { useState } from "react";
 import heroImage from "../../assets/contact-hero1.jpg";
 
+export default function ContactPage() {
 const [formData, setFormData] = useState({
   firstName: "",
   lastName: "",
@@ -19,7 +20,7 @@ const handleSubmit = (e) => {
 };
 
 
-export default function ContactPage() {
+
   return (
     <div className="flex flex-col">
       
