@@ -1,5 +1,5 @@
 import { useState } from "react";
-import heroImage from "../../assets/contact-hero1.jpg";
+import heroImage from "../../assets/contact-hero4.jpg";
 
 export default function ContactPage() {
 const [formData, setFormData] = useState({
