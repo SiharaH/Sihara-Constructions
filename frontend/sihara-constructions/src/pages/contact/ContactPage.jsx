@@ -1,6 +1,14 @@
 import { useState } from "react";
 import heroImage from "../../assets/contact-hero1.jpg";
 
+const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
@@ -46,7 +54,7 @@ export default function ContactPage() {
         </div>
 
         <form className="bg-white shadow-xl rounded-2xl p-8 space-y-6">
-          
+
         </form>
       </section>
     </div>
