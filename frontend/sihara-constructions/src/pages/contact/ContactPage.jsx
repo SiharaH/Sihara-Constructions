@@ -26,7 +26,24 @@ export default function ContactPage() {
             Start planning your next project with us today 
           </p>
         </div>
-        
+      </section>
+
+      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pt-10 md:pt-14 pb-20 px-6">
+        <div className="flex flex-col justify-center">
+          <h3 className="text-green-900 font-semibold uppercase tracking-wide mb-2">
+            We're Here to Help
+          </h3>
+          <h2 className="text-4xl font-bold mb-4 leading-tight">
+            Let’s Talk About <br /> Your Next Build!
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Fill out the form, give us a call, or stop by our office.
+            Let’s start building something great together.
+          </p>
+          <div className="flex items-center gap-2 text-yellow-500">
+            ⭐⭐⭐⭐⭐ <span className="text-gray-700">260+ reviews (4.95 of 5)</span>
+          </div>
+        </div>
       </section>
     </div>
   );
