@@ -52,11 +52,13 @@ const handleSubmit = (e) => {
           <h3 className="text-green-900 font-semibold uppercase tracking-wide mb-2">
             We're Here to Help
           </h3>
-          <h2 className="text-4xl font-bold mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mt-2">
             Let’s Talk About <br /> Your Next Build!
           </h2>
+          <br />
           <p className="text-gray-600 mb-6">
             Fill out the form, give us a call, or stop by our office.
+            <br />
             Let’s start building something great together.
           </p>
           <div className="flex items-center gap-2 text-yellow-500">
@@ -66,11 +68,11 @@ const handleSubmit = (e) => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-xl rounded-2xl p-8 space-y-6"
+          className="bg-white shadow-2xl rounded-2xl p-10 space-y-6"
         >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-900">
           First Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -79,12 +81,12 @@ const handleSubmit = (e) => {
           value={formData.firstName}
           onChange={handleChange}
           required
-          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="mt-1 block w-full border-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         </div>
 
         <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-900">
           Last Name
         </label>
         <input
@@ -92,14 +94,14 @@ const handleSubmit = (e) => {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
-          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="mt-1 block w-full border-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-900">
           Email <span className="text-red-500">*</span>
         </label>
         <input
@@ -108,12 +110,12 @@ const handleSubmit = (e) => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="mt-1 block w-full border-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         </div>
 
         <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-900">
           Phone Number <span className="text-red-500">*</span>
         </label>
         <input
@@ -123,13 +125,13 @@ const handleSubmit = (e) => {
           onChange={handleChange}
           placeholder="+94"
           required
-          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="mt-1 block w-full border-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         </div>
         </div>
 
         <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-900">
          Your Message <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -138,7 +140,7 @@ const handleSubmit = (e) => {
           onChange={handleChange}
           rows="4"
           required
-          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="mt-1 block w-full border-2 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         ></textarea>
         </div>
 
@@ -207,7 +209,71 @@ const handleSubmit = (e) => {
               </svg>
             </div>
             <h3 className="font-semibold text-lg mb-2 text-green-900">Follow us</h3>
-            
+            <div className="flex items-center justify-center gap-6 mt-4">
+              {/* Facebook (Circle Background) */}
+              <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full p-2 flex items-center justify-center transition hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                className="w-6 h-6"
+              >
+                <circle cx="256" cy="256" r="256" fill="#0B342C" />
+                <path
+                  d="M293.33 176h48v-56h-48c-35.29 0-64 28.71-64 64v40h-48v56h48v128h56V280h56l8-56h-64v-32c0-8.82 7.18-16 16-16z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+
+              {/* Instagram */}
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-900 hover:text-green-700 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5-2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z" />
+                </svg>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-900 hover:text-green-700 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+                  <path d="M23.498 6.186a2.966 2.966 0 0 0-2.087-2.099C19.145 3.6 12 3.6 12 3.6s-7.145 0-9.411.487a2.966 2.966 0 0 0-2.087 2.1C0 8.455 0 12 0 12s0 3.545.502 5.814a2.966 2.966 0 0 0 2.087 2.099C4.855 20.4 12 20.4 12 20.4s7.145 0 9.411-.487a2.966 2.966 0 0 0 2.087-2.1C24 15.545 24 12 24 12s0-3.545-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+                </svg>
+              </a>
+
+              {/* X (Twitter) */}
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg p-2 flex items-center justify-center transition hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                className="w-6 h-6"
+              >
+                <rect width="512" height="512" rx="15%" fill="#0B342C" />
+                <path
+                  d="M366.68 160H408l-96.07 110.52L414 352h-80l-62.35-84.63L206 352h-80l100.07-113.39L188 160h80l53.56 74.89L366.68 160z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            </div>
           </div>
         </div>
       </section>
