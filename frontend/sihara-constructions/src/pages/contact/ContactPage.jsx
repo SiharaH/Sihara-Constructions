@@ -63,10 +63,93 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="bg-white shadow-xl rounded-2xl p-8 space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white shadow-xl rounded-2xl p-8 space-y-6"
+        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+        <label className="block text-sm font-medium text-gray-700">
+          First Name <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        </div>
 
-        </form>
+        <div>
+        <label className="block text-sm font-medium text-gray-700">
+          Last Name
+        </label>
+        <input
+          type="text"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
+          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+        <label className="block text-sm font-medium text-gray-700">
+          Email <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        </div>
+
+        <div>
+        <label className="block text-sm font-medium text-gray-700">
+          Phone Number <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          placeholder="+94"
+          required
+          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        </div>
+        </div>
+
+        <div>
+        <label className="block text-sm font-medium text-gray-700">
+         Your Message <span className="text-red-500">*</span>
+        </label>
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows="4"
+          required
+          className="mt-1 block w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+        ></textarea>
+        </div>
+
+    <button
+      type="submit"
+      className="w-full bg-lime-400 hover:bg-lime-500 text-black font-semibold py-3 rounded-lg transition-colors"
+    >
+      SUBMIT
+    </button>
+  </form>
       </section>
     </div>
+    
   );
 }
