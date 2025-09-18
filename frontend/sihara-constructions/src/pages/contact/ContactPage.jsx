@@ -44,6 +44,10 @@ export default function ContactPage() {
             ⭐⭐⭐⭐⭐ <span className="text-gray-700">260+ reviews (4.95 of 5)</span>
           </div>
         </div>
+
+        <form className="bg-white shadow-xl rounded-2xl p-8 space-y-6">
+          
+        </form>
       </section>
     </div>
   );
