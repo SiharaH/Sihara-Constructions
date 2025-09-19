@@ -9,6 +9,7 @@ import Services from "./pages/services/Services";
 import Projects from "./pages/projects/Project";
 import Contact from "./pages/contact/ContactPage";
 import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
