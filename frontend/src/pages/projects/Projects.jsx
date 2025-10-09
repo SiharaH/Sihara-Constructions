@@ -155,6 +155,7 @@ const Projects = () => {
                   </ul>
                 </div>
 
+
                 <p className="mt-4 text-sm text-gray-500">Type: {project.type}</p>
               </div>
             </div>
