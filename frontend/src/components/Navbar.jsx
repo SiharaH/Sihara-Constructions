@@ -21,14 +21,9 @@ const Navbar = () => {
       end={end}
       onClick={() => isMobile && setIsOpen(false)}
       className={({ isActive }) =>
-        `relative group px-1 py-2 transition duration-300 text-sm font-medium ${
+        `relative group px-1 py-2 transition duration-300 text-base font-medium ${
           isActive
-            ? isHovered
-              ? "text-yellow-600"
-              : "text-yellow-400"
-            : isHovered
-            ? "text-black hover:text-yellow-600"
-            : "text-white hover:text-yellow-400"
+              ? "text-red-600" : "text-black hover:text-red-600"
         }`
       }
     >
@@ -52,11 +47,11 @@ const Navbar = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`fixed w-full top-0 z-50 px-6 md:px-36 flex justify-between items-center h-20 transition-colors duration-300 ${
-        isHovered ? "bg-white shadow-md" : "bg-transparent"
+        isHovered ? "bg-white/40 shadow-md" : "bg-transparent"
       }`}
     >
       {/* Logo Section */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-2">
         <img
           src={logo}
           alt="SIHARA Construction"
@@ -69,18 +64,6 @@ const Navbar = () => {
         <ul className="flex space-x-8 items-center">
           {navItems.map((item) => renderNavLink(item))}
         </ul>
-
-        {/* CTA Button */}
-        <NavLink
-          to="/contact"
-          className={`text-sm font-medium px-6 py-2 rounded-full shadow-md transition-all duration-300 ${
-            isHovered
-              ? "bg-yellow-400 text-black hover:bg-yellow-500"
-              : "bg-yellow-400 text-black hover:bg-white"
-          }`}
-        >
-          GET IN TOUCH
-        </NavLink>
       </div>
 
       {/* Mobile Hamburger */}

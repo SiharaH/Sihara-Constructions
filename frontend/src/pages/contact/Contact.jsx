@@ -1,5 +1,5 @@
 import { useState } from "react";
-import heroImage from "../../assets/contact-hero4.jpg";
+// import heroImage from "../assets/contact-hero4.jpg";
 
 export default function Contact() {
 const [formData, setFormData] = useState({
@@ -26,9 +26,9 @@ const handleSubmit = (e) => {
       
       <section
         className="relative bg-cover bg-center text-white h-[100vh] px-6 text-center flex flex-col justify-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${heroImage} || 'https://source.unsplash.com/1600x900/?construction')`,
+        // }}
       >
 
         <div className="absolute inset-0 bg-black/80"></div>
