@@ -39,7 +39,7 @@ const Services = () => {
       <section className="relative pt-32 pb-36 overflow-hidden bg-gradient-to-r from-red-400 via-red-500 to-amber-300">
 
         {/* GRID */}
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:40px_40px]" />
+        {/* <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:40px_40px]" /> */}
 
         {/* BLOBS */}
         <motion.div animate={{ y: [0, -30, 0] }} transition={{ duration: 6, repeat: Infinity }} className="absolute top-20 left-10 w-28 h-28 bg-white/20 rounded-full blur-3xl" />
@@ -139,8 +139,8 @@ const Services = () => {
 
       {/* CTA */}
       <section className="py-20 text-center bg-gray-50">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Have a project in mind?</h2>
-        <p className="text-gray-500 mb-6">Let’s build something great together.</p>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Need a Custom Solution?</h2>
+        <p className="text-gray-500 mb-6">Let’s Build Your Dream Together.</p>
 
         <Link to="/contact" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 hover:shadow-lg transition">
           Contact Us
