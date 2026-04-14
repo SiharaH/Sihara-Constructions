@@ -9,6 +9,7 @@ import Services from "./pages/services/Services";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </Router>
+
   );
 }
 
