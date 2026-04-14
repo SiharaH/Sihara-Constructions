@@ -9,6 +9,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SCServices from "../../assets/SCServices.jpg";
 
 const services = [
   { icon: Building2, title: "Residential Construction", desc: "Modern homes built with quality and durability.", features: ["Custom Homes", "Apartments", "Villas"] },
@@ -36,45 +37,41 @@ const Services = () => {
     <div className="bg-white">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-36 overflow-hidden bg-gradient-to-r from-red-400 via-red-500 to-amber-300">
+<section
+  className="relative pt-40 pb-48 overflow-hidden h-[100vh] px-6"
+  style={{
+    backgroundImage: `url(${SCServices})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    clipPath: "ellipse(100% 85% at 50% 0%)",
+  }}
+  >
 
-        {/* GRID */}
-        {/* <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:40px_40px]" /> */}
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* BLOBS */}
-        <motion.div animate={{ y: [0, -30, 0] }} transition={{ duration: 6, repeat: Infinity }} className="absolute top-20 left-10 w-28 h-28 bg-white/20 rounded-full blur-3xl" />
-        <motion.div animate={{ y: [0, 30, 0] }} transition={{ duration: 8, repeat: Infinity }} className="absolute bottom-20 right-10 w-36 h-36 bg-amber-300/30 rounded-full blur-3xl" />
-
-        {/* CONTENT */}
-        <motion.div style={{ y }} className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl px-8 py-10 shadow-xl">
-
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-white"
-            >
-              Our Services
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-4 text-white/90"
-            >
-              We deliver reliable construction solutions with quality and precision.
-            </motion.p>
-          </div>
-        </motion.div>
-
-        {/* CURVE */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg viewBox="0 0 1440 150" className="w-full h-[110px]">
-            <path fill="#ffffff" d="M0,80 C360,160 1080,0 1440,90 L1440,150 L0,150 Z"></path>
-          </svg>
+        <div className="relative z-10 text-center px-6 text-white mt-10">
+          <span className="px-3 py-1 rounded-full text-xs uppercase tracking-wide bg-yellow-500 text-black">
+            Services
+          </span>
+          <h1 className="md:text-6xl font-bold mt-4 ">
+            From Concept to Construction
+          </h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Discover our full range of construction services designed to transform ideas into strong, lasting structures.
+          </p>
         </div>
-      </section>
+
+  {/* CURVE */}
+  {/* <div className="absolute bottom-0 left-0 w-full">
+    <svg viewBox="0 0 1440 150" className="w-full h-[110px]">
+      <path
+        fill="#ffffff"
+        d="M0,80 C360,160 1080,0 1440,90 L1440,150 L0,150 Z"
+      />
+    </svg>
+  </div> */}
+</section>
 
       {/* SERVICES */}
       <section className="py-24">
